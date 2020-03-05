@@ -21,3 +21,9 @@ User can view the listing of Favorite Books and Books which user is reading.
 - No use of API's data is stored in json format in frontend in ```data.json``` file.
 - Redux is used to add the data on frontend.
 
+## Functionality
+- User can view the list of all the books in the ``data.json `` static json.
+- User can see the llist of favoutite books.
+- User can see the books currently reading.
+- User can add new book from add new form. 
+- User can search books in All book listing, favoutite books listing and currently book reading.
