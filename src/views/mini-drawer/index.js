@@ -98,7 +98,13 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: "10px"
   },
   cardArea: {
-    paddingBottom: "10px"
+    paddingBottom: "10px",
+    paddingRight: "10px"
+  },
+  addBookArea: {
+    //display: "flex"
+    background: "#fff",
+    padding: "20px"
   },
   content: {
     flexGrow: 1,
@@ -213,7 +219,13 @@ export default function MiniDrawer(props) {
             <SearchBox hanedlSearchClick={hanedlSearchClick} />
           </div>
         )}
-        <div>
+        <div
+          className={
+            props.activeNav === "Add Book"
+              ? classes.addBookArea
+              : classes.bookList
+          }
+        >
           {props.activeNav === "Add Book" ? (
             <AddBook backHandler={handelMenuClick} />
           ) : result.length ? (
@@ -236,3 +248,4 @@ MiniDrawer.propTypes = {
   navClick: func,
   activeNav: string
 };
+
